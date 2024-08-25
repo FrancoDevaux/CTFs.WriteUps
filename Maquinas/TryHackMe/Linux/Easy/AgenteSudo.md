@@ -20,5 +20,11 @@ Al darle un cat el **hint.txt**, vemos posibles rutas de directorios para poner 
 ![image](https://github.com/user-attachments/assets/4908ca15-7018-4ecc-a1df-5ecfca00a9d0)
 ![image](https://github.com/user-attachments/assets/421797de-a838-4606-ac16-abcd77a7d9de)
 
-Haciendo control+u para ver el codigo fuente, econtramos unas credeniale por el cual podemos probar para conectranos por SSH (ya que el puerto 22 estaba OPEN)
+Haciendo `control+u` para ver el codigo fuente, econtramos unas credeniales por el cual podemos probar para conectranos por `SSH` (ya que el puerto 22 estaba *OPEN*)
 ![image](https://github.com/user-attachments/assets/60c99a9c-dc9a-48c2-9675-562ed7faa355)
+
+## SSH
+Probamos conectranos con las credenciales que econtramos y tuvimos éxito!
+![image](https://github.com/user-attachments/assets/607ba1c3-8311-4555-a482-7ea7dfdef1cd)
+
+# Escalada (`Alice`)
