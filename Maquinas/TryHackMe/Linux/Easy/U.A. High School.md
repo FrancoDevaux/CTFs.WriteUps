@@ -44,9 +44,12 @@ Ahora nos entablamos una conexxion con php de [Shell](https://www.revshells.com/
 ![image](https://github.com/user-attachments/assets/3c81d897-5985-4257-a899-86259dfa7e50)
 
 # Escalada (*Deku*)
-Vemos este archivo .jpg medio sospechoso la cual nos lo vamos a traer a nuestra máquina de atacante
-![image](https://github.com/user-attachments/assets/365ac3b6-b61d-4de1-83e5-a011ec2f7882)
-![image](https://github.com/user-attachments/assets/99989c45-f511-4135-8d68-dfb5b23cefff)
+En el directorio `/var/www` vemos este otro directorio `Hidden_Content` que habia este archivo.txt
+![image](https://github.com/user-attachments/assets/7b63816d-2a42-452c-b843-dacdd6e12296)
+
+Lo decodificamos como hicimos anteriormente y dice esto:
+![image](https://github.com/user-attachments/assets/9f6ee051-e491-400d-8ade-1dec1256ec5c)
+
 
 
 
