@@ -11,4 +11,7 @@ Comenzamos y hacemos un nmap para ver que puertos tiene abiertos
 
 ## Exiftool, Steghide
  Haciendo uso de exiftool no encontramos nada pero con **steghide** vemos que nos da un archivo 'hint.txt'
+ ```ruby
+    steghide extract -sf [imagen.jpg]
+```
  ![image](https://github.com/user-attachments/assets/da70eff4-b0b7-4846-8890-730e61a6373b)
