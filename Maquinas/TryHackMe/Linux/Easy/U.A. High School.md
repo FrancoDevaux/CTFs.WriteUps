@@ -50,7 +50,33 @@ En el directorio `/var/www` vemos este otro directorio `Hidden_Content` que habi
 Lo decodificamos como hicimos anteriormente y dice esto:
 ![image](https://github.com/user-attachments/assets/9f6ee051-e491-400d-8ade-1dec1256ec5c)
 
+Ahora encontramos este archivo **.jpg** la cual es curioso y por lo tanto lo traemos a nustra máquina de atacante
+![image](https://github.com/user-attachments/assets/6aecd4dc-f79b-4947-ab8f-5bb01b318e62)
 
+Ahora jugamos con `steghide` de esat forma
+```ruby
+steghide extract -sf oneforall.jpg
+```
+y cuando nos pida el salvaconducto poenmos esta `AllmightForEver!!!` que conseguimos antes
+![image](https://github.com/user-attachments/assets/d12a8664-e68e-47d2-8ab1-2eba665ff76a)
+![image](https://github.com/user-attachments/assets/e967c76d-10d4-4a47-bf88-98fe3b2ee54b)
+
+Obtuvimos un archivo llamado **creds.txt** la cual contiene la contraseña de `deku`
+![image](https://github.com/user-attachments/assets/c060f667-a047-4eb8-8a9c-62340046f921)
+![image](https://github.com/user-attachments/assets/6160432e-e6ad-4797-a5d5-250c3f86eeda)
+
+# Escalada ROOT
+Vemos que haciendo `sudo -l` podemos ejecutar ese script.sh como root
+![image](https://github.com/user-attachments/assets/90417cbe-f9a0-4c9a-a9ea-9d276169c331)
+
+Haciendo un `ls -la` al .sh observamos que somos los propietarios de ese archivo
+![image](https://github.com/user-attachments/assets/0ac46515-3c60-49bf-a003-38b91276f28d)
+
+ Agregamos el usuario deku al archivo sudoers ejecutando este comando `./feedback.sh` y agregamos esto:
+ ![image](https://github.com/user-attachments/assets/054bb5d9-0714-45d2-a475-e58c4d47c9d1)
+
+Entonces ahora como establecimos NOPASSWD en ALL, en la terminal hacemos un `sudo /bin/bash` y listo 
+![image](https://github.com/user-attachments/assets/dbb73d8a-bd6c-4bff-8363-6d2cca526c2f)
 
 
 
