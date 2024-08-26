@@ -7,7 +7,7 @@
 ![image](https://github.com/user-attachments/assets/5127edd1-af64-4d93-8831-f415f863a771)
 
 # Web port80
-En la web tenemos un `wordpress` y también lo podemos visualizar con `wapalyzer` y que utiliza `php`
+En la web tenemos un `wordpress` y también lo podemos visualizar con `wappalyzer` y que utiliza `php`
 
 ![image](https://github.com/user-attachments/assets/2c7af5f4-485f-4c57-9b70-67f4a5b2a7bb)
 
