@@ -1,4 +1,4 @@
-### Tags: `LFI` `PathHijacking` `user-agent`
+### Tags: `LFI` `PathHijacking` 
 
 # Escaneo (*22,80*)
 ```css
