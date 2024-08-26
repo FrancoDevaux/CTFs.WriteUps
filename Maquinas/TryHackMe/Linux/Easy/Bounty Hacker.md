@@ -1,4 +1,4 @@
-### Tags: `` `` `` ``
+### Tags: `ftp` `anonymous` `hydra` `ssh`
 
 # Escaneo (*21,22,80*)
 
@@ -21,7 +21,7 @@ Y el archivo `task.txt` hay un posible usuario `lin`
 ![image](https://github.com/user-attachments/assets/5bbf2a9f-80b9-45a8-9564-cd922aaa3677)
 
 ## Hydra 
-Como tenemos posibles contraseñas y un usuario, vamos a hacer **fuerza bruta** con hydra sobre el puerto 22
+Como tenemos posibles contraseñas y un usuario, vamos a hacer **fuerza bruta** con hydra sobre el ``puerto 22``
 
 ![image](https://github.com/user-attachments/assets/f45fed9f-0ded-4d82-93bc-02f76f68ed0c)
 
@@ -34,7 +34,8 @@ Nos conectamos por ssh con el usuario `lin:RedDr4gonSynd1cat3`
 ![image](https://github.com/user-attachments/assets/bbb68e49-c4ca-4582-8a82-b2c5a2c52f14)
 
 # Escalada ROOT
-Haciendo un ``sudo -l`` vemos eque podemos ejecutar como root `/bin/tar` y lo buscamos en **GTFOBINS** ---> [Link](https://gtfobins.github.io/)
+Haciendo un ``sudo -l`` vemos que podemos ejecutar como root `/bin/tar` y lo buscamos en **GTFOBINS** ---> [Link](https://gtfobins.github.io/)
 
-![image](https://github.com/user-attachments/assets/9fdc08d2-4a0f-4eb3-8760-8aab0d19b875)
+![image](https://github.com/user-attachments/assets/cd1c7906-dd3e-48e2-ae51-82d8a705139c)
+
 
