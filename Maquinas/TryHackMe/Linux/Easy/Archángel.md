@@ -1,4 +1,4 @@
-### Tags: `LFI` `PathHijacking` ``
+### Tags: `LFI` `PathHijacking` `user-agent`
 
 # Escaneo (*22,80*)
 ```css
@@ -41,9 +41,9 @@ Vemos que hay un archivo **backup** y le haceos un `strings` y hay un comando cp
 ![image](https://github.com/user-attachments/assets/6b6b1211-6769-4c70-ae04-706dcedaf699)
 
 Ahora lo que hacemos es hacer un nano cp y dentro ponerle SUID a la bash
-  -Le damos permisos 777 a cp
-  -Hacemos el EXPORT (el punto es para indicar el actual directorio de trabajo)
-  -Ejecutamos el ./backup y después hacemos un bash -p
+Le damos permisos 777 a cp
+Hacemos el EXPORT (el punto es para indicar el actual directorio de trabajo)
+Ejecutamos el ./backup y después hacemos un bash -p
 
 ![image](https://github.com/user-attachments/assets/94804e2f-323e-4a28-bd9c-9411bbf1e4e7)
 ![image](https://github.com/user-attachments/assets/1bd49c9d-2082-41dc-bec5-dd5593aa4887)
