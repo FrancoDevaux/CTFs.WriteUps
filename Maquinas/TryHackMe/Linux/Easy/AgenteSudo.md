@@ -1,9 +1,3 @@
-# Escaneo (**22,80**)
-Comenzamos y hacemos un nmap para ver que puertos tiene abiertos
-```css
- sudo nmap -p- 172.17.0.2 -sSVC --min-rate 5000 -n -Pn --open -oN escaneo.txt
-```
-![image](https://github.com/user-attachments/assets/4750c8a5-8f9d-47ef-82d9-159faf47c0ed)
 
 # WEB port80
 -Observamos que en la web hay una imagen, por ende nos lo descragamos en nuestra maquina
