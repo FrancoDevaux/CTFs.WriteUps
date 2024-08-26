@@ -72,12 +72,15 @@ Vemos que haciendo `sudo -l` podemos ejecutar ese script.sh como root
 ![image](https://github.com/user-attachments/assets/90417cbe-f9a0-4c9a-a9ea-9d276169c331)
 
 Haciendo un `ls -la` al .sh observamos que somos los propietarios de ese archivo
+
 ![image](https://github.com/user-attachments/assets/0ac46515-3c60-49bf-a003-38b91276f28d)
 
  Agregamos el usuario deku al archivo sudoers ejecutando este comando `./feedback.sh` y agregamos esto:
+ 
  ![image](https://github.com/user-attachments/assets/054bb5d9-0714-45d2-a475-e58c4d47c9d1)
 
 Entonces ahora como establecimos NOPASSWD en ALL, en la terminal hacemos un `sudo /bin/bash` y listo 
+
 ![image](https://github.com/user-attachments/assets/dbb73d8a-bd6c-4bff-8363-6d2cca526c2f)
 
 
