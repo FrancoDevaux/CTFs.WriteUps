@@ -38,7 +38,7 @@ Como vi que TODOS tienen permisos para modificarlo lo que hice es poner otra Rev
 
 ## Escalda ROOT
 Vemos que hay un archivo **backup** y le haceos un `strings` y hay un comando cp que siempre eso lo tiene que ejecutar ROOT 
-y por ende podes pensar en PATH Hijacking
+y por ende podes pensar en PATH Hijacking 
 ![image](https://github.com/user-attachments/assets/6b6b1211-6769-4c70-ae04-706dcedaf699)
 
 Ahora lo que hacemos es hacer un nano cp y dentro ponerle SUID a la bash, le damos permisos 777 a cp, hacemos el EXPORT (el punto es para indicar el actual directorio de trabajo). Por último Ejecutamos el ./backup y después hacemos un bash -p
