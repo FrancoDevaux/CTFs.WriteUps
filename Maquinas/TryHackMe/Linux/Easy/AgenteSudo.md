@@ -1,4 +1,4 @@
-# Tags: `zip2john` `display` `binwalk` `steghide`
+### Tags: `zip2john` `display` `binwalk` `steghide`
 
 # Escaneo (*21,22,80*)
 ```css
