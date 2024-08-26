@@ -5,7 +5,7 @@
  nmap -p- --open -sSCV --min-rate 4000 -vvv -n -Pn 10.10.60.214 -oN escaneo
 ```
 
-#Web port80
+# Web port80
 Observamos que esta el puerto 80 abierto y en las web hay un *dominio*, entonces lo ponemos en `/etc/hosts`
 
 ![image](https://github.com/user-attachments/assets/97d385f4-7806-4aae-9364-820e1b24d8ee)
