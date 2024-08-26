@@ -27,9 +27,11 @@ Pero vemos que esta vacío por ende vamos a fuzear otra ves pero con el subdirec
 gobuster dir -u http://10.10.123.253/assets  -t 100 -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,php --no-error
 ```
 Encontramos un `index.php`
+
 ![image](https://github.com/user-attachments/assets/753d3a94-41f5-4576-aa26-6ec4defe33af)
 
 Vemos que tenemos inyección de comandos con el parámetro `cmd`
+
 ![image](https://github.com/user-attachments/assets/625391f5-4fed-4b1d-b379-11f632c460e7)
 
 El texto de abajo está en **base 64** por ende si lo decodificamos esto nos dice lo siguiente
