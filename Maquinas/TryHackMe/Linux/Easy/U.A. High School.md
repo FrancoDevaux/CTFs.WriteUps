@@ -77,11 +77,12 @@ Haciendo un `ls -la` al .sh observamos que somos los propietarios de ese archivo
 
  Agregamos el usuario deku al archivo sudoers ejecutando este comando `sudo ./feedback.sh` y agregamos esto:
  
- ![image](https://github.com/user-attachments/assets/054bb5d9-0714-45d2-a475-e58c4d47c9d1)
+![image](https://github.com/user-attachments/assets/3dc3dc47-c3f5-4029-bbac-aff745efcded)
 
 Entonces ahora como establecimos NOPASSWD en ALL, en la terminal hacemos un `sudo /bin/bash` y listo 
 
-![image](https://github.com/user-attachments/assets/dbb73d8a-bd6c-4bff-8363-6d2cca526c2f)
+![image](https://github.com/user-attachments/assets/76a56c8a-6512-42be-ad68-bf82739aab2b)
+
 
 
 
