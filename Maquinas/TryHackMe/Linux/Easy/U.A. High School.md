@@ -75,7 +75,7 @@ Haciendo un `ls -la` al .sh observamos que somos los propietarios de ese archivo
 
 ![image](https://github.com/user-attachments/assets/0ac46515-3c60-49bf-a003-38b91276f28d)
 
- Agregamos el usuario deku al archivo sudoers ejecutando este comando `./feedback.sh` y agregamos esto:
+ Agregamos el usuario deku al archivo sudoers ejecutando este comando `sudo ./feedback.sh` y agregamos esto:
  
  ![image](https://github.com/user-attachments/assets/054bb5d9-0714-45d2-a475-e58c4d47c9d1)
 
