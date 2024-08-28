@@ -1,4 +1,4 @@
-### Tags `/usr/bin/vim` 
+### Tags `/usr/bin/vim` `searchsploit`
 
 # Escaneo (*21,80,2222*)
 
