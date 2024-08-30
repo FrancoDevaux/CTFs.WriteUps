@@ -104,7 +104,7 @@ Por ende *introducimos* su contraseña y estamos dentro
 Buscando en Google como escalar privilegios, encontramos este en en [HackTricks](https://book.hacktricks.xyz/linux-hardening/privilege-escalation#ld_preload-and-ld_library_path), seguimos los pasos que dice ahí.
 Codigo:
 
-```cs
+```c++
 #include <stdio.h>
 #include <sys/types.h>
 #include <stdlib.h>
