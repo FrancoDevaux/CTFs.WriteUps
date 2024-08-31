@@ -121,7 +121,7 @@ Vemos que poniendo `sudo -l` tenemos esto esto que podemos ejecutar como root:
 
 ![image](https://github.com/user-attachments/assets/3a60cf66-d76e-4182-a2d8-5f49027b678e)
 
-Buscando en internet en este [Enlace](https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/sudo/sudo-screen-privilege-escalation/) nos dice que acceder como hay que hacer para escalar a root:
+Buscando en internet en este [Enlace](https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/sudo/sudo-screen-privilege-escalation/) nos dice como hay que hacer para escalar a root:
 
 ```ruby
  sudo /usr/bin/screen -r cybercrafted
