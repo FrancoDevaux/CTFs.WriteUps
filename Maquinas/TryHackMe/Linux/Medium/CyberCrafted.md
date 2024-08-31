@@ -33,7 +33,8 @@ En los 2 (que marcamos en rojo) había un **panel de login** que era el mismo --
 
 También había un subdominio `www.store.cybercrafted.thm` y haciendo Gobuster encontramos este `search.php`
 
-![image](https://github.com/user-attachments/assets/dd9247cc-8988-49cd-a414-e181d107ef53)
+![image](https://github.com/user-attachments/assets/17acaa2d-a341-45b2-9c2a-fa390f0cc92d)
+
 
 ```ruby
 gobuster dir -u http://www.store.cybercrafted.thm/  -t 100 -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,php --no-error
