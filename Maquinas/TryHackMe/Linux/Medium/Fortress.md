@@ -31,8 +31,7 @@ Y el archivo `.file` es un es un archivo de bytes compilado en Python 2.7
 
 ### Descompilar 
 
-Vamos a descompilar el archivo de esta manera usando `uncompyle2`, este repo lo que hace es descompilar el código de bytes de la versión 2.5, 2.6, 2.7 de Python, 
-Pasos:
+Vamos a descompilar el archivo de esta manera usando `uncompyle2`, este repo lo que hace es descompilar el código de bytes de la versión 2.5, 2.6, 2.7 de Python
 
 ```ruby
 https://github.com/BlueEffie/uncompyle2.git
