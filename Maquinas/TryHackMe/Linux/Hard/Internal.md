@@ -36,7 +36,7 @@ Tenemos un posible usuario `admin` por esto:
 ![image](https://github.com/user-attachments/assets/3dd07698-24a5-45bb-8c4f-fa71b2bc68b6)
 
 Por ende como tenemos *un posible usuario* vamos a ver si encontramos su *password*: `my2boys` y vemos que tuvimos **éxito**.
-Comando: `wpscan --url http://internal.thm/worpress -U admin -P /usr/share/wordlist/rockyou.txt `
+Comando: ` wpscan --url http://internal.thm/worpress -U admin -P /usr/share/wordlist/rockyou.txt `
 
 ![image](https://github.com/user-attachments/assets/f2269bc9-28be-4f85-a110-0cce88d6201d)
 ![image](https://github.com/user-attachments/assets/c1a10734-792d-4713-9635-c069c700907f)
