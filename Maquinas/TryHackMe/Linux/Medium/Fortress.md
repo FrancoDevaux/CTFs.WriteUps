@@ -1,4 +1,4 @@
-###Tags: `` `` ``
+### Tags: `ftp` `telnet` `SHA1_collision`
 
 # Escaneo (*22,5581,5752,7331*)
 
