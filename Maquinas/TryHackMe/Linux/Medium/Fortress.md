@@ -9,7 +9,7 @@ sudo nmap -p- --open -sSCV --min-rate 4000 -vvv -n -Pn <ip> -oN escaneo
 
 -  En la descripción del CTF nos dice que agreguemos estos dos dominios al **/etc/hosts** `fortress y temple.fortress`
 
-#FTP (*anonymous*)
+# FTP (*anonymous*)
 
 Nos conectamos como el user **anonymous** sin proporcionar contraseña y nos traemos el ``.txt`` y un `.file`
 
