@@ -21,7 +21,7 @@ Mirando el código fuente de la web (**Ctrl + u**) encontramos un mensajito con 
 Con Gobuster encontramos este directorio `sitemap`
 
 ```ruby
-gobuster dir -u http://10.10.246.151 -t 150 -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,php,html --no-error
+gobuster dir -u http://<IP> -t 150 -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -x txt,php,html --no-error
 ```
 
 ![image](https://github.com/user-attachments/assets/5804e49d-ebc1-4473-835a-a51e4fc3d998)
@@ -32,7 +32,7 @@ gobuster dir -u http://10.10.246.151 -t 150 -w /usr/share/seclists/Discovery/Web
 Ahora tirándole un dirb encontramos este directorio `.ssh` con una clave **id_rsa**
 
 ```ruby
-dir http://10.10.10.10/sitemap
+dir http://<IP>/sitemap
 ```
 
 ![image](https://github.com/user-attachments/assets/bc2dd4fa-c631-4eb7-82d5-0d93195b4b68)
