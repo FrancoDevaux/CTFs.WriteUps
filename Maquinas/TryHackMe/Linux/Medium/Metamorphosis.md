@@ -79,4 +79,36 @@ Capturamos la petición con Burp y lo guardamos para jugar con `sqlmap`
 sudo sqlmap -r SQL_burp -dbs --risk 3 --level 5 --os-shell 
 ```
 
+Una ves nos dio la `os-shell` no entablamos una ReverShell de esta forma
+
+![image](https://github.com/user-attachments/assets/8b500aaa-a9af-4bbd-afab-6b09be1bf00c)
+
+![image](https://github.com/user-attachments/assets/d307da36-fa03-473f-bbb4-2f8cabe9bbcd)
+
+
+# Escalada **ROOT**
+
+Tenemos la primera flag
+
+![image](https://github.com/user-attachments/assets/63efa394-6cdc-4d36-8188-f87a3b2b0f7f)
+
+Haciendo un `getcap -r / 2>/dev/null` tenemos capibility (**cap_net_raw+ep**) indica que el archivo tiene el bit de ejecución elevado (**ep**) y la capibility **cap_net_raw** asignada.
+
+![image](https://github.com/user-attachments/assets/8acaf11c-26f0-49a6-b899-ea459a9bee17)
+
+Lo que hacemos es tirar un `LinPeas` y observamos esto:
+
+![image](https://github.com/user-attachments/assets/23a8f327-409a-4951-9962-67426f514288)
+
+Entonces si hacemos un `curl http://127.0.0.1:1027/?admin=ScadfwerDSAd_343123ds123dqwe12` obtenemos la id_rsa de `root`
+
+![image](https://github.com/user-attachments/assets/f5f4b619-70d7-4bd2-a156-1dc27cc2f773)
+
+Nos conectamos por **ssh** y listo
+
+![image](https://github.com/user-attachments/assets/7631cb16-dbc0-4752-b81e-c7181acf2707)
+
+
+
+
 
