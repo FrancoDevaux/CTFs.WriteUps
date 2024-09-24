@@ -94,13 +94,13 @@ Antes nos ponemos en escucha con `netcat` y llamamos al archivo.php
 ![image](https://github.com/user-attachments/assets/c6f68002-b062-4773-b326-3c22f766481c)
 
 
-Escalada (``ArthurMorgan``)
+# Escalada (``ArthurMorgan``)
 
 Como teníamos una contraseña la probamos y funciono `DeadEye`
 
 ![image](https://github.com/user-attachments/assets/7bb2a385-9ea5-47d7-86de-e4d57fde6979)
 
-Escalada (``marston``)
+# Escalada (``marston``)
 
 Poniendo `printenv` que es para ver la variables de entorno que están configuradas en el sistema y observamos el puerto ``4545 OPEN``
 
