@@ -48,11 +48,11 @@ Ahora lo que hacemos es **copiarnos** todos los archivos a nuestra máquina y ve
 rsync -av rsync://<IP>/Conf ./mi_Conf
 ```
 
-![image](https://github.com/user-attachments/assets/69154a29-52ff-41c4-9c94-a1af5c2d86dc)
+![image](https://github.com/user-attachments/assets/48cd2430-dead-4aeb-a32d-14d8672f6d84)
 
 Observando los distintos archivos, en `webapp.ini` encontramos credenciales de un **TomCat** que esta en `prod`
 
-![image](https://github.com/user-attachments/assets/6cea61e9-e1e3-4ea2-acf2-a058c6b6e8d1)
+![image](https://github.com/user-attachments/assets/1a9bac4d-f2b5-46f5-b887-523659d05f1f)
 
 Entonces lo que hacemos es cambiarlo a `dev` y enviarlo otra ves con el archivo cambiado 
 
