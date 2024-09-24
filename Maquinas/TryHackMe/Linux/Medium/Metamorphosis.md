@@ -102,11 +102,12 @@ Lo que hacemos es tirar un `LinPeas` y observamos esto:
 
 Entonces si hacemos un `curl http://127.0.0.1:1027/?admin=ScadfwerDSAd_343123ds123dqwe12` obtenemos la id_rsa de `root`
 
-![image](https://github.com/user-attachments/assets/f5f4b619-70d7-4bd2-a156-1dc27cc2f773)
+![image](https://github.com/user-attachments/assets/94254f5a-5311-43d2-bbc1-c55a0b4e42fb)
 
 Nos conectamos por **ssh** y listo
 
-![image](https://github.com/user-attachments/assets/7631cb16-dbc0-4752-b81e-c7181acf2707)
+![image](https://github.com/user-attachments/assets/88055320-ca7a-4678-9a78-959013395f8a)
+
 
 
 
