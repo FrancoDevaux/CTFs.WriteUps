@@ -40,7 +40,7 @@ Ahora nos metemos dentro de `Conf`
 rsync -av rsync://<IP>/Conf
 ```
 
-![image](https://github.com/user-attachments/assets/8ecf56b3-74f8-4fbc-9a76-249de491c1d8)
+![image](https://github.com/user-attachments/assets/143f82fd-de88-4b48-8b9e-cf4534e8d426)
 
 Ahora lo que hacemos es **copiarnos** todos los archivos a nuestra máquina y verifiquemos si podemos obtener algo
 
