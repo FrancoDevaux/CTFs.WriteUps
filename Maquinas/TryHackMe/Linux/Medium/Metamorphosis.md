@@ -106,7 +106,9 @@ Entonces si hacemos un `curl http://127.0.0.1:1027/?admin=ScadfwerDSAd_343123ds1
 
 Nos conectamos por **ssh** y listo
 
-![image](https://github.com/user-attachments/assets/88055320-ca7a-4678-9a78-959013395f8a)
+![image](https://github.com/user-attachments/assets/13b21ae1-741e-4218-8b9f-0c6ed31799f3)
+![image](https://github.com/user-attachments/assets/a6783f38-646c-4412-9082-5e6d97c8b71c)
+
 
 
 
