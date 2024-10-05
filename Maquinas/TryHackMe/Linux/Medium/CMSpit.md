@@ -23,7 +23,7 @@ Haciendo `Ctrl + u` encontramos la versión del CMS
  ![image](https://github.com/user-attachments/assets/eca60d91-558f-4947-b6c7-2395ccc75ff0)
 
 Ahora vemos que genera un **token CSFR** para la autenticación y podemos ver los **nombres de usuarios** usando el operador ``$func`` de la biblioteca MongoLite. 
-	- Obtuvimos 4 nombres de usuarios 
+	-Obtuvimos 4 nombres de usuarios 
 
 ![image](https://github.com/user-attachments/assets/bbe75d12-f0ef-44b6-8891-9149c4740144)
 
