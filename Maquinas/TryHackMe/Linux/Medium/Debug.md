@@ -135,7 +135,7 @@ Con `John The Ripper` obtuvimos la contraseña -->  `jamaica`
 ![image](https://github.com/user-attachments/assets/e41b5b59-9653-402b-8e6c-1c531440dc53)
 
 
-# Escalada **ROOT**
+# Escalada `ROOT`
 
 Dentro del directorio de **James** y un archivito `Note-To-James.txt` que dice esto:
 
