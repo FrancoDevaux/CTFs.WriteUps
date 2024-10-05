@@ -3,7 +3,7 @@
 # Escaneo(*22, 80*)
 
 ```css
-sudo nmap -p- --open -sSCV --min-rate 4000 -vvv -n -Pn <IP> -oN esaceno
+sudo nmap -p- --open -sSCV --min-rate 4000 -vvv -n -Pn <IP> -oN escaneo
 ```
 
 ![image](https://github.com/user-attachments/assets/7c1faa27-2654-4b6a-b92e-a3f9f62adda4)
