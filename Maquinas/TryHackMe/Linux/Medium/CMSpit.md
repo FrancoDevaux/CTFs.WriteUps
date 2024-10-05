@@ -39,10 +39,10 @@ Ahora puedo volcar las credenciales del usuario cuyo token se ha creado ingresan
 
 ![image](https://github.com/user-attachments/assets/9a0c494c-2c5c-4273-87c3-f122286d4d3d)
 
-Con estos datos , ``--->`` nosotros vamos a poder cambiar la contraseña de administrador e iniciar sesión en la página de ``CMSpit``.
-	1. Utilizar la aplicación con la clave API.
-	2. Obtener por fuerza bruta la contraseña de la cuenta a partir del hash.
-	3. Cambiar la contraseña de la cuenta utilizando el `/auth/resetpassword` método:
+- Con estos datos , ``--->`` nosotros vamos a poder cambiar la contraseña de administrador e iniciar sesión en la página de ``CMSpit``.
+	- 1. Utilizar la aplicación con la clave API.
+	- 2. Obtener por fuerza bruta la contraseña de la cuenta a partir del hash.
+	- 3. Cambiar la contraseña de la cuenta utilizando el `/auth/resetpassword` método:
 
 ![image](https://github.com/user-attachments/assets/9985b0b9-fb47-45bc-bc79-3713d4fcc756)
 
