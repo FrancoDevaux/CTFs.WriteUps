@@ -148,3 +148,21 @@ python3 -m http.server
 Ahora con `wget` nos traemos el **PwnKit**, le damos permisos de ejecución y listo somo `ROOT`
 
 ![image](https://github.com/user-attachments/assets/cd742d33-c123-4293-8893-0058c0a27742)
+![image](https://github.com/user-attachments/assets/27fcd171-a9c6-4bd5-bd15-fcbe431e1d61)
+
+Encontramos esto y jugando con [CyberChef](https://gchq.github.io/CyberChef/) lo desciframos
+
+![image](https://github.com/user-attachments/assets/df30eb57-5c97-4b80-9ebf-48cefbb7ba97)
+
+![image](https://github.com/user-attachments/assets/8725a7db-6d18-42ed-a3cf-99d2538307ce)
+
+Este es el mensajito encriptado que dejaba
+
+```txt
+This is not over! You may have saved your beloved planet this time, Hacker-man, but I will be back with a bigger, more dastardly plan to get rid of that inferior operating system, Linux.
+```
+
+
+
+
+
