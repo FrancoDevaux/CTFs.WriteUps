@@ -105,7 +105,7 @@ Enumerando encontramos credenciales en `/etc/wordpress/` para la base de datos -
 
 Entramos dentro poniendo
 
-```bash
+```css
 mysql -u root -p
 ```
 
