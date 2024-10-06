@@ -109,7 +109,7 @@ Entramos dentro poniendo
 mysql -u root -p
 ```
 
- Comandos:
+ - Comandos:
 	- `show databses` : listamos las bases de datos existentes
 	- `use wordpress` : para meternos dentro de la base de datos Wordpress
 	- `show tables` : para que lista las tablas dentro de esa base de datos
@@ -117,7 +117,7 @@ mysql -u root -p
 
 ![image](https://github.com/user-attachments/assets/29c5b66e-7d61-44c0-9178-4ab8f712fe7e)
 
-Una ves nos listó las tablas queremos:
+- Una ves nos listó las tablas queremos:
 	- `describe wp_users` : que me describa que tipo de tabla es, que campos contiene, que son , etc
 	- `select user_login,user_pass from wp_users` : para que me dumpee todo dentro de esos parámetros de la tabla seleccionada
 
