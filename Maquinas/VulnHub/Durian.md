@@ -78,7 +78,7 @@ El cual como vimos poniendo `?file=/etc/passwd` tenemos un LFI
 
 ### Intruder ---> Sniper
 
-Lo primeor que hacemos e scapturar la peticion con Burp y mandarlo al Repeater
+Lo primero que hacemos e scapturar la peticion con Burp y mandarlo al Repeater
 
 ![image](https://github.com/user-attachments/assets/0662e375-8b5f-481e-8f68-9f1ce786ecbd)
 
