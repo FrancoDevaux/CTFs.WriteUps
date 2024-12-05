@@ -2,7 +2,7 @@
 
 # Reconocimiento (`Linux`)
 
-Lo primero que hacemos es un **escaneo de equipos** que estén conectados ami red de esta forma:
+Lo primero que hacemos es un **escaneo de equipos** que estén conectados a mi red de esta forma:
 
 ```ruby
 arp-scan -I eth0 --localnet
