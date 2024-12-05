@@ -76,20 +76,20 @@ Jugando con `order by` encontramos que había **6 columnas**. (Ctrl + u para url
 ### Enumerar la Base de Datos
 
 - Como sabemos que hay 6 columnas, jugamos con `union select` y cambiando el `id=2` podemos ver los numeritos de los campos que son vulnerables
-	- Jugamos con `group_concar(schema_name) ......  from information_schema.schemata` para que nos liste **TODAS** las bases de datos existentes
+	- Jugamos con `group_concat(schema_name) ......  from information_schema.schemata` para que nos liste **TODAS** las bases de datos existentes
 
 ![image](https://github.com/user-attachments/assets/2aeb8a8d-7766-4903-b7bc-6b1fb420f8e3)
 ![image](https://github.com/user-attachments/assets/b05f0643-5fd0-449b-a894-58bd037f4fd2)
 
 ### Enumeramos las Tablas
 
-Con este comando: ``group_concar(table_name) ......  from information_schema.tables where table_schema='darkhole_2'´ `` para que nos enumera las tablas de la base datos de **darkhole_2**
+Con este comando: ``group_concat(table_name) ......  from information_schema.tables where table_schema='darkhole_2'´ `` para que nos enumera las tablas de la base datos de **darkhole_2**
 
 ![image](https://github.com/user-attachments/assets/e019b369-1402-4a7e-a983-2231886bb65b)
 
 ### Enumeramos las Columnas
 
-Con este comando: ``group_concar(column_name) ......  from information_schema.columns where table_schema='darkhole_2' and table_name='ssh'`` enumeramos las columnas de la base de datos *darkhole_2* de la tabla **ssh**
+Con este comando: ``group_concat(column_name) ......  from information_schema.columns where table_schema='darkhole_2' and table_name='ssh'`` enumeramos las columnas de la base de datos *darkhole_2* de la tabla **ssh**
 
 ![image](https://github.com/user-attachments/assets/0d6509b1-11c6-477e-a77c-5a03a80dcf9a)
 
