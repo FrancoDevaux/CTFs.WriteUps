@@ -123,7 +123,7 @@ Ahora si hacemos un `ps -faux` y grepeamos por el puerto 9999 observamos que hay
 
 ![image](https://github.com/user-attachments/assets/99b85f08-171c-424c-b749-03b688ceda00)
 
-Si vamos a **/opt/web** vemos que hay un `index.php` que contiene un tipo de condicional mediante el parámetro *GET* si estas pasando el *CMD* y se es así **ejecutas un comando** a nivel de sistema
+Si vamos a **/opt/web** vemos que hay un `index.php` que contiene un tipo de condicional mediante el parámetro *GET* si estas pasando el *CMD* y si es así **ejecutas un comando** a nivel de sistema
 
 ![image](https://github.com/user-attachments/assets/13444984-c380-48e3-b36a-c54ce0772936)
 
