@@ -159,7 +159,9 @@ if __name__ == '__main__':
 
 ```
 
+- Vemos que nos sacó una base de datos llamada `admin` que parece interesante
 
+![image](https://github.com/user-attachments/assets/9df7e65a-8c90-4bb0-863d-15976b813594)
 
 
 
