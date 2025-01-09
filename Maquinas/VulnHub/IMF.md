@@ -2,7 +2,7 @@
 
 # Reconocimiento (`Linux`)
 
-Lo primero que hacemos es un **escaneo de equipos** que estén conectados ami red de esta forma:
+- Lo primero que hacemos es un **escaneo de equipos** que estén conectados ami red de esta forma:
 
 ```ruby
 arp-scan -I eth0 --localnet
@@ -26,11 +26,11 @@ sudo nmap -p80 -sCV <IP> -oN escaneo
 
 # Port 80
 
-Navegando por la web hicimos un `control + u` y observamos un doble ``==``  que nos llamo la atención  y vemos que estaba en **base64**, lo cual vamos decodificar
+- Navegando por la web hicimos un `control + u` y observamos un doble ``==``  que nos llamo la atención  y vemos que estaba en **base64**, lo cual vamos decodificar
 
 ![image](https://github.com/user-attachments/assets/60c94905-ca6b-46b8-b1b5-390ac5be5115)
 
-Lo decodificamos y vemos que **nos dá otra cadena en base64**, lo volvemos a decodificar y nos da una **ruta** que vamos a poner en la web
+- Lo decodificamos y vemos que **nos dá otra cadena en base64**, lo volvemos a decodificar y nos da una **ruta** que vamos a poner en la web
 
 ![image](https://github.com/user-attachments/assets/adb0010e-9595-4a60-a7d9-9dc6815b7c39)
 ![image](https://github.com/user-attachments/assets/0b46ff27-5876-4a25-8b68-b24eb6b19c15)
