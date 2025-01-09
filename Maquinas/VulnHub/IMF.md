@@ -1,4 +1,4 @@
-### Tags: `SQLI` `REC` `BufferOverflow`
+### Tags: `SQLI` `REC` `msfvenom` `BufferOverflow`
 
 # Reconocimiento (`Linux`)
 
